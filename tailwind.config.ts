@@ -14,6 +14,9 @@ const config: Config = {
       lg: "1200px",
     },
     extend: {
+      clip: {
+        text: 'text'
+      },
       container: {
         center: true,
         padding: {
