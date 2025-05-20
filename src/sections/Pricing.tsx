@@ -67,9 +67,9 @@ export const Pricing = () => {
           </p>
         </div>
         <div className="flex flex-col gap-6 items-center mt-10 lg:flex-row lg:justify-center lg:items-end">
-          {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features }, idx) => (
+          {pricingTiers.map(({ title, monthlyPrice, buttonText, popular, inverse, features}, index) => (
             <div
-              key={title + idx}
+              key={index}
               className={twMerge(
                 "card",
                 inverse === true && "border-black bg-black z-10 text-white"
@@ -108,8 +108,8 @@ export const Pricing = () => {
               </div>
               <button className='btn btn-primary w-full mt-[30px]' >{buttonText}</button>
               <ul className='flex flex-col gap-5 mt-8'>
-                {features.map((feature) => (
-                  <li className='text-sm flex items-center gap-4'>
+                {features.map((feature, index) => (
+                  <li key={index} className='text-sm flex items-center gap-4'>
                     <CheckIcon className="w-6 h-6" />
                     <span>{feature}</span>
                   </li>
